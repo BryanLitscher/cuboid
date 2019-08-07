@@ -1,0 +1,59 @@
+.wrap {
+  perspective: 400px;
+  perspective-origin: 200px -200px;
+}
+.wrap .cube {
+  position: relative;
+  width: 100px;
+  transform-style: preserve-3d;
+}
+.wrap .cube img {
+  width: 100%;
+  height: auto;
+}
+.wrap .cube > div {
+  position: absolute;
+  overflow: hidden;
+}
+.wrap .cube .front {
+  transform: translateZ(50px);
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.wrap .cube .back {
+  transform: translateZ(-50px) rotateY(180deg);
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+}
+.wrap .cube .left {
+  height: 100px;
+  width: 100px;
+  transform: rotateY(270deg) translateX(-50px);
+  transform-origin: center left;
+  background-color: linen;
+}
+.wrap .cube .right {
+  height: 100px;
+  width: 100px;
+  transform: rotateY(-270deg) translateX(50px) translateZ(0px);
+  transform-origin: top right;
+  background-color: purple;
+}
+.wrap .cube .top {
+  width: 100px;
+  height: 100px;
+  transform: rotateX(90deg) translateY(-50px);
+  transform-origin: top center;
+  background-color: brown;
+}
+.wrap .cube .bottom {
+  width: 100px;
+  height: 100px;
+  transform: rotateX(-90deg) translateZ(100px) translateY(-50px);
+  transform-origin: top center;
+  background-color: gray;
+}
+
+/*# sourceMappingURL=main.css.map */

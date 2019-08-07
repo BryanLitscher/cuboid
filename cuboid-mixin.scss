@@ -1,0 +1,58 @@
+
+
+$primaryColor: green;
+
+
+@mixin cuboid($height, $width, $depth){
+	perspective: 800px;
+	perspective-origin: 200px -200px;	
+	.cube {
+		position: relative;
+		width: $width + px;
+		transform-style: preserve-3d;
+		img {
+			width:100%;height:auto;
+			}
+		>div {
+				position: absolute;
+				overflow: hidden;
+				background-color:brown;
+			}
+		.front {
+			transform: translateZ($depth/2 + px);
+			width: $width + px;
+			height: $height + px;
+			}
+		.back {
+			transform: translateZ(- + $depth/2 + px) rotateY(180deg);
+			width: $width + px;
+			height: $height + px;
+			}
+		.left {
+			height: $height + px;
+			width: $depth + px;
+			transform: rotateY(270deg) translateX(- + $depth/2 + px);
+			transform-origin: center left;		
+			}
+		.right {
+			height: $height + px;
+			width: $depth + px;		
+			transform: rotateY(-270deg) translateX($depth/2 + px) translateZ( $width - $depth  + px);
+			transform-origin: top right;
+			}
+		.top { 
+			width:$width + px;
+			height:$depth + px;	 ;
+			transform: rotateX(90deg) translateY(- + $depth/2 + px);
+			transform-origin: top center;			
+			}
+		.bottom { 
+			width:$width + px;
+			height:$depth + px;	 
+			transform:  rotateX(-90deg) translateZ($height + px) translateY(- + $depth/2 + px);
+			transform-origin: top center;
+			}
+	}
+
+  }
+  

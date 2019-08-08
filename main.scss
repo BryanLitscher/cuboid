@@ -1,5 +1,5 @@
 @import "cuboid-mixin.scss";
 
 .wrap {
- @include cuboid(100, 100, 100, rgba(255,0,0,0.7), yellow, linen, purple,brown, gray );
+ @include cuboid(100, 100, 100, rgba(255,0,0,0.7), yellow, linen, purple,brown, gray, 400 , left bottom, 50, 50 );
 }

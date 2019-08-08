@@ -1,6 +1,6 @@
 .wrap {
   perspective: 400px;
-  perspective-origin: left top;
+  perspective-origin: left bottom;
 }
 .wrap .cube {
   position: relative;

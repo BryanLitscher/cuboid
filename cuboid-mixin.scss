@@ -1,13 +1,13 @@
 
 
 
-@mixin cuboid($height, $width, $depth, $frontColor:tan, $backColor:tan, $leftColor:tan, $rightColor:tan, $topColor:tan, $bottomColor:tan, $perspective:400, $p-origin:left top){
+@mixin cuboid($height, $width, $depth, $frontColor:tan, $backColor:tan, $leftColor:tan, $rightColor:tan, $topColor:tan, $bottomColor:tan, $perspective:400, $p-origin:left top, $pos-left:0, $pos-top:0 ){
 	perspective: $perspective + px;
 	perspective-origin: $p-origin;	
 	.cube {
 		position: relative;
-		left:50px;
-		top:50px;
+		left:$pos-left + px;
+		top:$pos-top + px;
 		width: $width + px;
 		transform-style: preserve-3d;
 		img {

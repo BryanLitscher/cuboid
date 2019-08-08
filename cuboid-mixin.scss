@@ -1,4 +1,4 @@
-
+@import "sass-css3-mixins-master/css3-mixins.scss";
 
 
 @mixin cuboid($height, $width, $depth, $frontColor:tan, $backColor:tan, $leftColor:tan, $rightColor:tan, $topColor:tan, $bottomColor:tan, $perspective:400, $p-origin:left top, $pos-left:0, $pos-top:0 ){
@@ -9,7 +9,7 @@
 		left:$pos-left + px;
 		top:$pos-top + px;
 		width: $width + px;
-		transform-style: preserve-3d;
+		@include transform-style;
 		img {
 			width:100%;height:auto;
 			}
@@ -18,13 +18,13 @@
 				overflow: hidden;
 			}
 		.front {
-			transform: translateZ($depth/2 + px);
+			@include transform( translateZ($depth/2 + px) );
 			width: $width + px;
 			height: $height + px;
 			background-color: $frontColor  ;
 			}
 		.back {
-			transform: translateZ(- + $depth/2 + px) rotateY(180deg);
+			@include transform( translateZ(- + $depth/2 + px) rotateY(180deg) );
 			width: $width + px;
 			height: $height + px;
 			background-color: $backColor  ;
@@ -32,29 +32,29 @@
 		.left {
 			height: $height + px;
 			width: $depth + px;
-			transform: rotateY(270deg) translateX(- + $depth/2 + px);
-			transform-origin: center left;	
+			@include transform( rotateY(270deg) translateX(- + $depth/2 + px) );
+			@include transform-origin( center left );
 			background-color: $leftColor  ;			
 			}
 		.right {
 			height: $height + px;
 			width: $depth + px;		
-			transform: rotateY(-270deg) translateX($depth/2 + px) translateZ( $width - $depth  + px);
-			transform-origin: top right;
+			@include transform(rotateY(-270deg) translateX($depth/2 + px) translateZ( $width - $depth  + px) );
+			@include transform-origin(top right);
 			background-color: $rightColor  ;	
 			}
 		.top { 
 			width:$width + px;
 			height:$depth + px;	 ;
-			transform: rotateX(90deg) translateY(- + $depth/2 + px);
-			transform-origin: top center;		
+			@include transform( rotateX(90deg) translateY(- + $depth/2 + px) );
+			@include transform-origin(top center);			
 			background-color: $topColor  ;	
 			}
 		.bottom { 
 			width:$width + px;
 			height:$depth + px;	 
-			transform:  rotateX(-90deg) translateZ($height + px) translateY(- + $depth/2 + px);
-			transform-origin: top center;
+			@include transform(  rotateX(-90deg) translateZ($height + px) translateY(- + $depth/2 + px) );
+			@include transform-origin(top center);
 			background-color: $bottomColor  ;	
 			}
 	}

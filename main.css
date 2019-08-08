@@ -1,3 +1,16 @@
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
 .wrap {
   perspective: 400px;
   perspective-origin: left bottom;
@@ -7,6 +20,11 @@
   left: 50px;
   top: 50px;
   width: 100px;
+  -webkit-transform-style: preserve-3d;
+  -khtml-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .wrap .cube img {
@@ -18,42 +36,92 @@
   overflow: hidden;
 }
 .wrap .cube .front {
+  -webkit-transform: translateZ(50px);
+  -khtml-transform: translateZ(50px);
+  -moz-transform: translateZ(50px);
+  -ms-transform: translateZ(50px);
+  -o-transform: translateZ(50px);
   transform: translateZ(50px);
   width: 100px;
-  height: 100px;
+  height: 200px;
   background-color: rgba(255, 0, 0, 0.7);
 }
 .wrap .cube .back {
+  -webkit-transform: translateZ(-50px) rotateY(180deg);
+  -khtml-transform: translateZ(-50px) rotateY(180deg);
+  -moz-transform: translateZ(-50px) rotateY(180deg);
+  -ms-transform: translateZ(-50px) rotateY(180deg);
+  -o-transform: translateZ(-50px) rotateY(180deg);
   transform: translateZ(-50px) rotateY(180deg);
   width: 100px;
-  height: 100px;
+  height: 200px;
   background-color: yellow;
 }
 .wrap .cube .left {
-  height: 100px;
+  height: 200px;
   width: 100px;
+  -webkit-transform: rotateY(270deg) translateX(-50px);
+  -khtml-transform: rotateY(270deg) translateX(-50px);
+  -moz-transform: rotateY(270deg) translateX(-50px);
+  -ms-transform: rotateY(270deg) translateX(-50px);
+  -o-transform: rotateY(270deg) translateX(-50px);
   transform: rotateY(270deg) translateX(-50px);
+  -webkit-transform-origin: center left;
+  -khtml-transform-origin: center left;
+  -moz-transform-origin: center left;
+  -ms-transform-origin: center left;
+  -o-transform-origin: center left;
   transform-origin: center left;
   background-color: linen;
 }
 .wrap .cube .right {
-  height: 100px;
+  height: 200px;
   width: 100px;
+  -webkit-transform: rotateY(-270deg) translateX(50px) translateZ(0px);
+  -khtml-transform: rotateY(-270deg) translateX(50px) translateZ(0px);
+  -moz-transform: rotateY(-270deg) translateX(50px) translateZ(0px);
+  -ms-transform: rotateY(-270deg) translateX(50px) translateZ(0px);
+  -o-transform: rotateY(-270deg) translateX(50px) translateZ(0px);
   transform: rotateY(-270deg) translateX(50px) translateZ(0px);
+  -webkit-transform-origin: top right;
+  -khtml-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -ms-transform-origin: top right;
+  -o-transform-origin: top right;
   transform-origin: top right;
   background-color: purple;
 }
 .wrap .cube .top {
   width: 100px;
   height: 100px;
+  -webkit-transform: rotateX(90deg) translateY(-50px);
+  -khtml-transform: rotateX(90deg) translateY(-50px);
+  -moz-transform: rotateX(90deg) translateY(-50px);
+  -ms-transform: rotateX(90deg) translateY(-50px);
+  -o-transform: rotateX(90deg) translateY(-50px);
   transform: rotateX(90deg) translateY(-50px);
+  -webkit-transform-origin: top center;
+  -khtml-transform-origin: top center;
+  -moz-transform-origin: top center;
+  -ms-transform-origin: top center;
+  -o-transform-origin: top center;
   transform-origin: top center;
   background-color: brown;
 }
 .wrap .cube .bottom {
   width: 100px;
   height: 100px;
-  transform: rotateX(-90deg) translateZ(100px) translateY(-50px);
+  -webkit-transform: rotateX(-90deg) translateZ(200px) translateY(-50px);
+  -khtml-transform: rotateX(-90deg) translateZ(200px) translateY(-50px);
+  -moz-transform: rotateX(-90deg) translateZ(200px) translateY(-50px);
+  -ms-transform: rotateX(-90deg) translateZ(200px) translateY(-50px);
+  -o-transform: rotateX(-90deg) translateZ(200px) translateY(-50px);
+  transform: rotateX(-90deg) translateZ(200px) translateY(-50px);
+  -webkit-transform-origin: top center;
+  -khtml-transform-origin: top center;
+  -moz-transform-origin: top center;
+  -ms-transform-origin: top center;
+  -o-transform-origin: top center;
   transform-origin: top center;
   background-color: gray;
 }

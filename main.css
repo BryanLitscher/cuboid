@@ -1,9 +1,11 @@
 .wrap {
   perspective: 400px;
-  perspective-origin: 200px -200px;
+  perspective-origin: left top;
 }
 .wrap .cube {
   position: relative;
+  left: 50px;
+  top: 50px;
   width: 100px;
   transform-style: preserve-3d;
 }
@@ -19,7 +21,7 @@
   transform: translateZ(50px);
   width: 100px;
   height: 100px;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.7);
 }
 .wrap .cube .back {
   transform: translateZ(-50px) rotateY(180deg);
